@@ -45,9 +45,8 @@ def name_new_photo(dir_save):
     :param dir_save: Папка с сохраненными файлами
     :return: возвращает полное имя нового файла
     """
-    last_name = os.listdir(dir_save)[-1]
-    last_number = int(last_name[14:-4])
-    new_name = f'photo_message_{last_number+1}.jpg'
+    last_name = os.listdir(dir_save)
+    new_name = f'photo_message_{len(last_name)}.jpg'
     return new_name
 
 
@@ -58,7 +57,6 @@ def name_new_voice(dir_save):
     :param dir_save: Папка с сохраненными файлами
     :return: возвращает полное имя нового файла
     """
-    last_name = os.listdir(dir_save)[-1]
-    last_number = int(last_name[14:-4])
-    new_name = f'audio_message_{last_number+1}.ogg'
+    last_name = os.listdir(dir_save)
+    new_name = f'audio_message_{len(last_name)}.ogg'
     return new_name
