@@ -47,7 +47,7 @@ def get_photo(message):
         save_file(url_file, id_user, 'photo')
         bot.send_message(message.chat.id, 'Опаньки! Схороню.')
     else:
-        bot.send_message(message.chat.id, 'Пейзажи, картинки... Хоть ктонибудь лицо прислал(.')
+        bot.send_message(message.chat.id, 'Пейзажи, картинки... Хоть кто-нибудь лицо прислал(.')
 
 
 @bot.message_handler(content_types=['voice'])
